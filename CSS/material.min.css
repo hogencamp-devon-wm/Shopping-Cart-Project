@@ -4251,7 +4251,20 @@ input.mdl-button[type="submit"] {
     height: 100%
 }
 
-.mdl-layout__title, .mdl-layout-title {
+.mdl-layout-title {
+    display: block;
+    position: relative;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: .02em;
+    font-weight: 400;
+    box-sizing: border-box
+}
+
+.mdl-layout-title-logo {
+    color: #ffffff;
+    text-decoration: none;
     display: block;
     position: relative;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -4773,7 +4786,7 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-layout__tab-bar-button .material-icons {
-    line-height: 48px
+    line-height: 10px;
 }
 
 .mdl-layout__tab-bar-button.is-active {

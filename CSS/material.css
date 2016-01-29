@@ -6388,6 +6388,8 @@ input.mdl-button[type="submit"] {
 
 .mdl-layout__title,
 .mdl-layout-title {
+  color: #fb3f00;
+  text-decoration: none;
   display: block;
   position: relative;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
