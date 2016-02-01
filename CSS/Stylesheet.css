@@ -1,0 +1,17 @@
+
+.IconBubble {
+    position:absolute;
+    top: 12px;
+    right:40px;
+    background-color:darkgray;
+    color:white;
+    font-weight:bold;
+    font-size:0.55em;
+    height: 22px;
+    width: 22px;
+    border-radius:11px;
+    box-shadow:1px 1px 1px gray;
+}
+.fix {
+    margin-top: 10px
+}

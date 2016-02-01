@@ -23,9 +23,9 @@
                         <a class="mdl-navigation__link" href="Profile.php">Profile</a>
                         <a class="mdl-navigation__link" href="Contact.php">Contact</a>
                         <a class="mdl-navigation__link" href="About.php">About</a>
-                        <a class="mdl-navigation__link" href="Cart.php">
-                            <i class="material-icons">shopping_cart</i>
-                            <div class="IconBubble"><center><p>3</p></center></div>
+                        <a class="mdl-navigation__link" href="Cart.php">            
+                            <i class="material-icons" style="margin-top: 70px;">shopping_cart</i>
+                            <div class="IconBubble" style="margin-top: 8px;"><center><p>3</p></center></div>
                         </a>
                     </nav>
                 </div>
