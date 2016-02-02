@@ -15,3 +15,27 @@
 .fix {
     margin-top: 10px
 }
+.page-content {
+    text-align: center;
+}
+
+body {
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+.main_header {
+    margin: 0;
+    padding: 0;
+}
+
+.ImageHeader {
+    background-image: url("Images/devices.jpg");
+    width: 100%;
+}
+
+.TextFull {
+    padding: 30px;
+    color: white;
+    background-color: #959090;
+}

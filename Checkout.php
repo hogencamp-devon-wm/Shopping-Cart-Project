@@ -23,16 +23,16 @@
                         <a class="mdl-navigation__link" href="Profile.php">Profile</a>
                         <a class="mdl-navigation__link" href="Contact.php">Contact</a>
                         <a class="mdl-navigation__link" href="About.php">About</a>
-                        <a class="mdl-navigation__link" href="Cart.php">
-                            <i class="material-icons">shopping_cart</i>
-                            <div class="IconBubble"><center><p>3</p></center></div>
+                        <a class="mdl-navigation__link" href="Cart.php">            
+                            <img src = "Images/cart.png" width = "30px">
+                            <div class="IconBubble" style="margin-top: 8px;"><center><p>3</p></center></div>
                         </a>
                     </nav>
                 </div>
             </header>
             
             <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Welcome </span>
+                <span class="mdl-layout-title">Welcome</span>
                 <!--PHP out the persons name HERE!-->
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="About.php">Account</a>

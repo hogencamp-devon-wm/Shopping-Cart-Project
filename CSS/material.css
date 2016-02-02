@@ -3809,9 +3809,10 @@ input.mdl-button[type="submit"] {
     -webkit-transform: translate(-12px, -12px);
         -ms-transform: translate(-12px, -12px);
             transform: translate(-12px, -12px);
-    line-height: 10px;
+    line-height: -9px;
     width: 30px;
-    margin-top: 15px;  
+    margin-top: 50px; 
+    font-size: 30px;
 }
 
   .mdl-button--fab.mdl-button--mini-fab {

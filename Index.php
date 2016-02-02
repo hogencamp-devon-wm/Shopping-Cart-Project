@@ -24,7 +24,7 @@
                         <a class="mdl-navigation__link" href="Contact.php">Contact</a>
                         <a class="mdl-navigation__link" href="About.php">About</a>
                         <a class="mdl-navigation__link" href="Cart.php">            
-                            <i class="material-icons" style="margin-top: 70px;">shopping_cart</i>
+                            <img src = "Images/cart.png" width = "30px">
                             <div class="IconBubble" style="margin-top: 8px;"><center><p>3</p></center></div>
                         </a>
                     </nav>
@@ -32,7 +32,7 @@
             </header>
             
             <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Welcome </span>
+                <span class="mdl-layout-title">Welcome</span>
                 <!--PHP out the persons name HERE!-->
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="About.php">Account</a>
@@ -44,7 +44,16 @@
             
             <main class="mdl-layout__content">
                 <div class="page-content">
-                
+                    <h1 class="main_header">This is your one stop </h1>
+                    <h1 class="main_header">shop for all of the Tech you need.</h1>
+                    
+                    <div class="ImageHeader">
+                        <img src="Images/devices.jpg" width="100%">
+                    </div>
+                    
+                    <div class="TextFull">
+                        <h4>More Stuff</h4>   
+                    </div>
                 </div>
             </main>
         </div>
