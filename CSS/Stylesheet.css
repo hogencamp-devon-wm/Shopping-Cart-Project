@@ -30,7 +30,6 @@ body {
 }
 
 .ImageHeader {
-    background-image: url("Images/devices.jpg");
     width: 100%;
 }
 
@@ -38,4 +37,17 @@ body {
     padding: 30px;
     color: white;
     background-color: #959090;
+}
+
+.ImageHeader1 {
+    transform: rotate(0deg);
+    align-self: center;
+    transform: translateY(-300px);
+}
+
+.background {
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    width: 50%;
 }

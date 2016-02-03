@@ -35,7 +35,6 @@
                 <span class="mdl-layout-title">Welcome</span>
                 <!--PHP out the persons name HERE!-->
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="About.php">Account</a>
                     <a class="mdl-navigation__link" href="Profile.php">Profile</a>
                     <a class="mdl-navigation__link" href="FAQ.php">FAQ</a>
                     <a class="mdl-navigation__link" href="About.php">About</a>
