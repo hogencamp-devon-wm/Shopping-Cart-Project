@@ -35,14 +35,14 @@ body {
 
 .TextFull {
     padding: 30px;
-    color: white;
-    background-color: #959090;
+    color: darkslategray;
+    background-color: white;
 }
 
-.ImageHeader1 {
-    transform: rotate(0deg);
+.Image {
     align-self: center;
-    transform: translateY(-300px);
+    transform: translateY(-250px);
+	background-color: black;
 }
 
 .background {
@@ -50,4 +50,9 @@ body {
     margin: 0;
     padding: 0;
     width: 50%;
+}
+
+.ImageDiv {
+	width: 50%;
+	background-color: grey;
 }

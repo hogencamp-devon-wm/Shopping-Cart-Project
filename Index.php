@@ -53,7 +53,8 @@
                     <div class="TextFull">
                         <h4>More Stuff</h4>   
                     </div>
-                    <img class="ImageHeader1" src="Images/nexus.jpg" width="50%">
+				 
+				<img class="Image" src="Images/Nexus.png" width="50%">
                 </div>
             </main>
         </div>
