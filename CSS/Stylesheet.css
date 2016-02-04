@@ -12,9 +12,6 @@
     border-radius:11px;
     box-shadow:1px 1px 1px gray;
 }
-.fix {
-    margin-top: 10px
-}
 .page-content {
     text-align: center;
 }
@@ -39,10 +36,14 @@ body {
     background-color: white;
 }
 
-.Image {
+.Image1 {
     align-self: center;
-    transform: translateY(-250px);
-	background-color: black;
+    background-color: #f2f2f2;
+}
+
+.Image2 {
+    align-self: center;
+    background-color: #cccccc;
 }
 
 .background {
@@ -55,4 +56,29 @@ body {
 .ImageDiv {
 	width: 50%;
 	background-color: grey;
+}
+
+.ImageOver {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.TextOver {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+}
+
+.TextOverDescription {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    width: 100%;
+    text-align: left;
+    color: black;
 }

@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="CSS/Stylesheet.css">
     </head>
-    
     <body>
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             
@@ -49,12 +48,23 @@
                     <div class="ImageHeader">
                         <img src="Images/devices.jpg" width="100%">
                     </div>
-                    
+                    <!--Add Description of Company-->
                     <div class="TextFull">
-                        <h4>More Stuff</h4>   
+                        <h4>Insert Company description here</h4>
+                        <h6>Company Description paragraph</h6>  
                     </div>
-				 
-				<img class="Image" src="Images/Nexus.png" width="50%">
+                    
+                    <div class="ImageOver">
+                        <img class="Image1" src="Images/Nexus.png" width="100%">
+                        <h1 class="TextOver">Nexus 5X & 6P</h1>
+                        <br>
+                        <h3 class="TextOverDescription">These are our newest Android Marshmallow Phones</h3>
+                    </div>
+                    
+                    <img class="Image2" src="Images/tablet.png" width="70%">
+                    <img class="Image1" src="Images/watch.png" width="70%">
+                    <img class="Image2" src="Images/chromebook.png" width="70%">
+                    <img class="Image1" src="Images/BigRed.jpg" width="70%">
                 </div>
             </main>
         </div>
