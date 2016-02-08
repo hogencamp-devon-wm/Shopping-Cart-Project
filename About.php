@@ -43,7 +43,28 @@
             
             <main class="mdl-layout__content">
                 <div class="page-content">
-                
+                    <div class="TextFull">
+                        <h2>About Us</h2>
+                        
+                        <h4>Here at Tech Master we want to provide you with the Technology to Master your
+					    life in the most productive way possible. We have products in every catagory to 
+					    keep you connected to what matters. We have Phones, Tablets, Watches, Laptops, and Desktops. 
+                        We have a passion for quality and want to make sure you have the best experience possible with our 
+                        products.</h4> 
+                    </div>
+                    
+                    <footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">
+			           <div class="mdl-mini-footer__left-section">
+				       <div class="mdl-logo">Tech Master</div>
+				       
+				       <ul class="mdl-mini-footer__link-list">
+					       <li><a href="About.php">About</a></li>
+					       <li><a href="Contact.php">Contatact</a></li>
+					       <li><a href="FAQ.php">FAQ</a></li>
+					       <li>Tech Master&copy;</li>
+				       </ul>
+			           </div>
+                   </footer>
                 </div>
             </main>
         </div>

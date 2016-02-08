@@ -116,3 +116,73 @@ body {
      left: 145px;
      align-self: left;
 }
+
+.ImageOver3 {
+    	width: 70%;
+    	margin: 0 auto;
+	background-color: #f2f2f2;
+}
+
+.TextOver2 {
+	top: 70px;
+    	left: 10px;
+    	width: 100%;
+    	text-align: left;
+    	font-weight: bold;
+    	color: black;
+}
+
+
+.TextOverDesktop {
+	position: relative;
+    	top: 10px;
+    	left: 10px;
+    	width: 100%;
+    	text-align: left;
+    	font-weight: bold;
+    	color: black;
+}	
+
+.TextOverDescriptionDesktop {
+	position: relative;
+	top: -10px;
+    	left: 10px;
+    	width: 100%;
+    	text-align: left;
+    	color: black;
+}
+
+.TextOverLinkDesktop {
+	position: relative;
+	top: -40px;
+     left: 10px;
+     width: 100%;
+     text-align: left;
+     color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.ArrowDesktop {
+     
+}
+
+.Products {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Product {
+    width: 33.33%;
+    background-color: #f2f2f2;
+    padding-bottom: 10px;
+}
+
+.Price {
+    color: black;
+}
+
+.Link {
+    text-decoration: none;
+    color: black;
+}

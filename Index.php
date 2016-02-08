@@ -58,8 +58,8 @@
                 <div class="TextFull">
                     <h2>OUR COMPANY & GOALS</h2>
                     <h4>Here at Tech Master we want to provide you with the Technology to Master your
-					life in the most productive way possible. We have products in every catagory to k
-					eep you connected to what matters.</h4> 
+					life in the most productive way possible. We have products in every catagory to 
+					keep you connected to what matters.</h4> 
                 </div>
 
                 <div class="ImageOver">
@@ -124,10 +124,29 @@
                 
                 <br>
                 
-                <div class="ImageOver">
+                <div class="ImageOver3">
+				<h1 class="TextOverDesktop">Desktops</h1>
+				<br>
+				<h3 class="TextOverDescriptionDesktop">Powerfull Desktops to keep you working hard all day</h3> 
+				<br>
+				<a href="">
+					<h4 class="TextOverLinkDesktop">SHOP NOW</h4>
+				</a>
                     <img class="Image1" src="Images/BigRed.jpg" width="100%">
                 </div>
             </div>
+		   
+		   <footer class="mdl-mini-footer">
+			   <div class="mdl-mini-footer__left-section">
+				   <div class="mdl-logo">Tech Master</div>
+				   <ul class="mdl-mini-footer__link-list">
+					   <li><a href="About.php">About</a></li>
+					   <li><a href="Contact.php">Contatact</a></li>
+					   <li><a href="FAQ.php">FAQ</a></li>
+					   <li>Tech Master&copy;</li>
+				   </ul>
+			   </div>
+		   </footer>
         </main>
     </div>
 </body>
