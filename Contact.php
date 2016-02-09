@@ -48,22 +48,24 @@
                         
                         <h4>If you have any questions about our product line or something is going wrong with one of our products feel free to contact us at...</h4>
                         
-                        <table class="mdl-data-table mdl-js-data-table">
-                          <thead>
-                            <tr>
-                              <th class="mdl-data-table__cell--non-numeric">Address</th>
-                              <th class="mdl-data-table__cell--non-numeric">Phone</th>
-                              <th class="mdl-data-table__cell--non-numeric">Email</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="mdl-data-table__cell--non-numeric">1600 Amphitheatre Parkway Mountain View, CA 94043 USA</td>
-                              <td class="mdl-data-table__cell--non-numeric">650 253 0000</td>
-                              <td class="mdl-data-table__cell--non-numeric">TechMasterSupport@TechMaster.com</td>
-                            </tr>
-                          </tbody>
-                        </table>  
+                        <center>
+                            <table class="mdl-data-table mdl-js-data-table">
+                              <thead>
+                                <tr>
+                                  <th class="mdl-data-table__cell--non-numeric">Address</th>
+                                  <th class="mdl-data-table__cell--non-numeric">Phone</th>
+                                  <th class="mdl-data-table__cell--non-numeric">Email</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="mdl-data-table__cell--non-numeric">1600 Amphitheatre Parkway Mountain View, CA 94043 USA</td>
+                                  <td class="mdl-data-table__cell--non-numeric">650 253 0000</td>
+                                  <td class="mdl-data-table__cell--non-numeric">TechMasterSupport@TechMaster.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </center>  
                     </div>
                     
                     <footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">

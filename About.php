@@ -44,6 +44,10 @@
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <div class="TextFull">
+                        <div class="ImageHeader">
+                            <img src="Images/devices.jpg" width="100%">
+                        </div>
+                           
                         <h2>About Us</h2>
                         
                         <h4>Here at Tech Master we want to provide you with the Technology to Master your
@@ -53,7 +57,7 @@
                         products.</h4> 
                     </div>
                     
-                    <footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">
+                    <footer class="mdl-mini-footer">
 			           <div class="mdl-mini-footer__left-section">
 				       <div class="mdl-logo">Tech Master</div>
 				       

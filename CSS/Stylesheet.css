@@ -186,3 +186,7 @@ body {
     text-decoration: none;
     color: black;
 }
+
+.demo-list-item {
+  width: 70%;
+}

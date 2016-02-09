@@ -43,7 +43,29 @@
             
             <main class="mdl-layout__content">
                 <div class="page-content">
-                
+                    <div class="TextFull">
+                        <h1>FAQ</h1>
+                        <h4>Have any questions about Tech Master and how to get what you want out of the site well then your in the right spot for answers to all of your questions.</h4> 
+                    </div>
+                    
+                    <center>
+                        <ul class="demo-list-item">
+                          <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">What OS do your products run?</span>
+                            <span class="mdl-list__item-primary-content">-For Phones we run Android Marshmallow, Tablets Android Marshmallow, Laptops Chrome OS, and Windows 10, and Desktops are Windows 10.</span>
+                          </li>
+                          
+                          <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content"></span>
+                            <span class="mdl-list__item-primary-content">-</span>
+                          </li>
+                          
+                          <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content"></span>
+                            <span class="mdl-list__item-primary-content">-</span>
+                          </li>
+                        </ul>
+                    </center>
                 </div>
             </main>
         </div>
