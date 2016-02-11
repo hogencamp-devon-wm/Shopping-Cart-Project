@@ -3,32 +3,41 @@ require_once('Connect.php');
 $error = false;
 $success = false;
 
-if(@$_POST['addUser']){
+if(@$_POST['Users']){
     /**
-     * New user was submitted. Make sure name and email are present!
+     * Here we start checks to make sure that all forms are filled out correctly
      */
-    if(!$_POST['email']){
-        $error .= '<p>Email is a required field!</p>';
+    if(!$_POST['FirstName']){
+        $error .= '<p>First Name is a required field!</p>';
     }
 
-    if(!$_POST['name']){
-        $error .= '<p>Email is a required field!</p>';
+    if(!$_POST['LastName']){
+        $error .= '<p>Last Name is a required field!</p>';
+    }
+    
+    if(!$_POST['Email']){
+        $error .= '<p>Last Name is a required field!</p>';
+    }
+    
+    if(!$_POST['LastName']){
+        $error .= '<p>Last Name is a required field!</p>';
     }
 
-    /**
-     * If we're here...all is well. Process the insert
-     */
+    /**After validation checks are complete and everthing is ok then we insert data into database here*/
+     
     $stmt = $dbh->prepare('INSERT INTO users (name, email) VALUES (:name, :email)');
     $result = $stmt->execute(
         array(
             'name'=>$_POST['name'],
-            'email'=>$_POST['email']
+            'email'=>$_POST['email'],
         )
     );
 
     if($result){
         $success = "User " . $_POST['email'] . " was successfully saved.";
-    }else{
+    }
+    
+    else{
         $success = "There was an error saving " . $_POST['email'];
     }
 }
