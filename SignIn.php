@@ -3,17 +3,17 @@
 
 	/**Checks to see if use has already logged in and if so they will be redirected to Profile Page*/
 
-	if(isset($_SESSION['Email'])){
-    		header('location: Profile.php');
+	if(){
+        header('location: Profile.php');
 	}
 	
-	/*require_once('Connect.php');*/
+	require_once('Connect.php');
 	$error = false;
 	$success = false;
 
 	/**Starts Sign In Proccess*/
 
-	if(@_POST['SignIn']){
+	if(@$_POST['SignIn']){
 		
 		/**Start Checks to make sure that the forms have stuff in them*/
 		
@@ -29,7 +29,7 @@
 		
 		$query = $con->prepare("SELECT * FROM Users WHERE Email = :Email AND Password = :Password");
     		
-    		$SignIn = $query->fetch();
+        $SignIn = $query->fetch();
 		
 		/**If there is a User then User is taken to their profile*/
 		
@@ -37,7 +37,7 @@
 			/*Query UserInfo so it can be used accross the site*/
 		
 			$query = $con->prepare("SELECT FirstName, LastName, Email FROM Users WHERE Email = :Email AND Password = :Password;");
-    			$UserInfo = $query->fetchAll();
+            $UserInfo = $query->fetchAll();
 			
 			/*Queried Data is then saved in PHP SESSION*/
         		
