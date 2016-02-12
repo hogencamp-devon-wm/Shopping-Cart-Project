@@ -19,14 +19,14 @@
                     
                     <div class="mdl-layout-spacer"></div>
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
-                        <a class="mdl-navigation__link" href="Product.php">Products</a>
-                        <a class="mdl-navigation__link" href="Profile.php">Profile</a>
-                        <a class="mdl-navigation__link" href="Contact.php">Contact</a>
-                        <a class="mdl-navigation__link" href="About.php">About</a>
-                        <a class="mdl-navigation__link" href="Cart.php">            
-                            <img src = "Images/cart.png" width = "30px">
-                            <div class="IconBubble" style="margin-top: 8px;"><center><p>3</p></center></div>
-                        </a>
+                        	<a class="mdl-navigation__link" href="Product.php">Products</a>
+                        	<a class="mdl-navigation__link" href="Contact.php">Contact</a>
+                        	<a class="mdl-navigation__link" href="About.php">About</a>
+					<a class="mdl-navigation__link" href="SignIn.php">Sign In</a>
+                        	<a class="mdl-navigation__link" href="Cart.php">            
+                        	    <img src = "Images/cart.png" width = "30px">
+                        	    <div class="IconBubble" style="margin-top: 8px;"><center><p>3</p></center></div>
+                        	</a>
                     </nav>
                 </div>
             </header>
@@ -56,8 +56,8 @@
                           </li>
                           
                           <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content"></span>
-                            <span class="mdl-list__item-primary-content">-</span>
+                            <span class="mdl-list__item-primary-content">How do I buy Products?</span>
+                            <span class="mdl-list__item-primary-content">-First Register for Account</span>
                           </li>
                           
                           <li class="mdl-list__item">

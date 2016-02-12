@@ -19,11 +19,11 @@
                     
                     <div class="mdl-layout-spacer"></div>
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
-                        <a class="mdl-navigation__link" href="Product.php">Products</a>
-                        <a class="mdl-navigation__link" href="Profile.php">Profile</a>
-                        <a class="mdl-navigation__link" href="Contact.php">Contact</a>
-                        <a class="mdl-navigation__link" href="About.php">About</a>
-                        <a class="mdl-navigation__link" href="Cart.php">            
+                        	<a class="mdl-navigation__link" href="Product.php">Products</a>
+                        	<a class="mdl-navigation__link" href="Contact.php">Contact</a>
+                        	<a class="mdl-navigation__link" href="About.php">About</a>
+					<a class="mdl-navigation__link" href="SignIn.php">Sign In</a>
+                        	<a class="mdl-navigation__link" href="Cart.php">            
                             <img src = "Images/cart.png" width = "30px">
                             <div class="IconBubble" style="margin-top: 8px;"><center><p>3</p></center></div>
                         </a>

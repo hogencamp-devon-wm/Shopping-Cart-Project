@@ -192,5 +192,10 @@ body {
 }
 
 .Form {
-    width: 50%
+    width: 50%;
+    margin: 35px;
+}
+
+.ProductForm {
+	width: 200px;
 }
