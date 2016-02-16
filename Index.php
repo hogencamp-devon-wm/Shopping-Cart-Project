@@ -67,7 +67,7 @@
 					<br>
 					<h3 class="TextOverDescription">These are our newest Android Marshmallow Phones</h3>
 
-					<a href="">
+					<a href="Product.php">
 						<h4 class="TextOverDescription2">SHOP NOW</h4>
 						<!--INSERT LINK TO PRODUCTS/PRODUCT PAGE FOR 2 PRODUCTS-->
 						<img src="Images/Arrow.png" class="Arrow" width="30px">
@@ -83,7 +83,7 @@
 					<h3 class="TextOverDescription">Premium design with the best of Google built in, so 
 				 		you can work and play any way you want to</h3>
 
-					<a href="">
+					<a href="Product.php">
 						<h4 class="TextOverDescription3">SHOP NOW</h4>
 						<!--INSERT LINK TO PRODUCTS/PRODUCT PAGE FOR 2 PRODUCTS-->
 						<img src="Images/Arrow.png" class="Arrow2" width="30px">
@@ -98,7 +98,7 @@
 					<br>
 					<h3 class="TextOverDescription">Watches that bring you information at a glance</h3>
 
-					<a href="">
+					<a href="Product.php">
 						<h4 class="TextOverDescription2">SHOP NOW</h4>
 						<!--INSERT LINK TO PRODUCTS/PRODUCT PAGE FOR 2 PRODUCTS-->
 						<img src="Images/Arrow.png" class="Arrow" width="30px">
@@ -113,7 +113,7 @@
 					<br>
 					<h3 class="TextOverDescription">Easy-to-use labptops for everyday work and play</h3>
 
-					<a href="">
+					<a href="Product.php">
 						<h4 class="TextOverDescription2">SHOP NOW</h4>
 						<!--INSERT LINK TO PRODUCTS/PRODUCT PAGE FOR 2 PRODUCTS-->
 						<img src="Images/Arrow.png" class="Arrow" width="30px">
@@ -127,7 +127,7 @@
 					<br>
 					<h3 class="TextOverDescriptionDesktop">Powerfull Desktops to keep you working hard all day</h3>
 					<br>
-					<a href="">
+					<a href="Product.php">
 						<h4 class="TextOverLinkDesktop">SHOP NOW</h4>
 					</a>
 					<img class="Image1" src="Images/BigRed.jpg" width="100%">

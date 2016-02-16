@@ -57,11 +57,10 @@ if(@$_POST['Users']){
 	/**After validation checks are complete and everthing is ok then we insert data into database here*/
      
 	if($error == false) {
-        $stmt = $dbh->prepare('INSERT INTO Users (UserID, FirstName, LastName, Email, PhoneNumber, CardNumber, Address, Password)
-        VALUES (:UserID, :FirstName, :LastName, :Email, :PhoneNumber, :CardNumber, :Address, :Password)');
+        $stmt = $dbh->prepare('INSERT INTO Users (FirstName, LastName, Email, PhoneNumber, CardNumber, Address, Password)
+        VALUES (:FirstName, :LastName, :Email, :PhoneNumber, :CardNumber, :Address, :Password)');
 	   $result = $stmt->execute(
    		array(
-		  	'UserID' => Null,
 		  	'FirstName' => $_POST['FirstName'],
 			'LastName' => $_POST['LastName'],
 			'Email' => $_POST['Email'],
@@ -71,6 +70,7 @@ if(@$_POST['Users']){
 			'Password' => $_POST['Password']
    		)
 	);
+        $success = true;
     }
     
     
@@ -79,12 +79,12 @@ print_r($dbh->errorInfo());
     
 	/**If the data from the form is inserted into data base then it displays a success message*/ 
 	
-	if($result){
+	if($success){
    		$success = "User " . $_POST['Email'] . " was successfully saved.";
 		
 		/**Now I use PHP SESSIONS to save user data so that it is accesable outside of this page*/
 		
-		$_SESSION['Registered'] = 1;
+		$_SESSION['SignIn'] = 1;
 		$_SESSION['FirstName'] = $_POST['FirstName'];
 		$_SESSION['LastName'] = $_POST['LastName'];
 		$_SESSION['Email'] = $_POST['Email'];
@@ -171,12 +171,12 @@ print_r($dbh->errorInfo());
                             </div>
 
                             <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="tel" name="PhoneNumber">
+                                <input class="mdl-textfield__input" type="number" name="PhoneNumber">
                                 <label class="mdl-textfield__label" for="sample1">Phone Number</label>
                             </div>
 
                             <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type=text name="CardNumber">
+                                <input class="mdl-textfield__input" type="number" name="CardNumber">
                                 <label class="mdl-textfield__label" for="sample1">Card Number</label>
                             </div>
 
@@ -201,7 +201,7 @@ print_r($dbh->errorInfo());
                         </form>
                     </center>
 
-                    <footer class="mdl-mini-footer">
+                    <footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">
                         <div class="mdl-mini-footer__left-section">
                             <div class="mdl-logo">Tech Master</div>
                             <ul class="mdl-mini-footer__link-list">

@@ -1,16 +1,13 @@
 <?php
 	session_start();
+    require_once('Connect.php');
 
 	/**Checks to see if use has already logged in and if so they will be redirected to Profile Page*/
 
-	if(){
+	if(@$_SESSION['SignIn'] == 1){
         header('location: Profile.php');
 	}
 	
-	require_once('Connect.php');
-	$error = false;
-	$success = false;
-
 	/**Starts Sign In Proccess*/
 
 	if(@$_POST['SignIn']){
@@ -27,7 +24,7 @@
 		
 		/**Checks to see if that user exists*/
 		
-		$query = $con->prepare("SELECT * FROM Users WHERE Email = :Email AND Password = :Password");
+		$query = $dbh->prepare("SELECT * FROM Users WHERE Email = :Email AND Password = :Password");
     		
         $SignIn = $query->fetch();
 		
@@ -36,7 +33,7 @@
 		if($SignIn){
 			/*Query UserInfo so it can be used accross the site*/
 		
-			$query = $con->prepare("SELECT FirstName, LastName, Email FROM Users WHERE Email = :Email AND Password = :Password;");
+			$query2 = $con->prepare("SELECT FirstName, LastName, Email FROM Users WHERE Email = :Email AND Password = :Password;");
             $UserInfo = $query->fetchAll();
 			
 			/*Queried Data is then saved in PHP SESSION*/
@@ -44,6 +41,7 @@
 			$_SESSION['FirstName'] = fetchAll(0);
 			$_SESSION['LastName'] = fetchAll(1);
 			$_SESSION['Email'] = fetchAll(2);
+            header('location: Profile.php');
 		}
 	}
 ?>
@@ -98,8 +96,34 @@
 
 		<main class="mdl-layout__content">
 			<div class="page-content">
+                <center>
+                        <h1>Sign In</h1>
 
-				<footer class="mdl-mini-footer">
+                        <form method="post" class="Form" name="SignIn">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input" type="text" name="Email">
+                                <label class="mdl-textfield__label" for="sample1">Email</label>
+                            </div>
+
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input" type="password" name="Password">
+                                <label class="mdl-textfield__label" for="sample1">Password</label>
+                            </div>
+
+                            <center>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit" name="SignIn" value="1">Sign In</button>
+                            </center>
+                        </form>
+                        
+                        <center>
+                            <h6>Dont Have an account, Register Here.</h6>
+                            <a href="Register.php">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" name="Register">Register</button>
+                            </a>
+                        </center>
+                    </center>
+
+				<footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">
 					<div class="mdl-mini-footer__left-section">
 						<div class="mdl-logo">Tech Master</div>
 						<ul class="mdl-mini-footer__link-list">

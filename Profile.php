@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    require_once('Connect.php');
+    
+    
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +28,7 @@
                         	<a class="mdl-navigation__link" href="Product.php">Products</a>
                         	<a class="mdl-navigation__link" href="Contact.php">Contact</a>
                         	<a class="mdl-navigation__link" href="About.php">About</a>
-					<a class="mdl-navigation__link" href="SignIn.php">Sign In</a>
+					<a class="mdl-navigation__link" href="SignOut.php">Sign Out</a>
                         	<a class="mdl-navigation__link" href="Cart.php">            
                         	    <img src = "Images/cart.png" width = "30px">
                         	    <div class="IconBubble" style="margin-top: 8px;"><center><p>3</p></center></div>
