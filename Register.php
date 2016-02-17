@@ -1,105 +1,97 @@
 <?php
-session_start();
-require_once('Connect.php');
-$error = false;
-$success = false;
-
-if(@$_POST['Users']){
-    	/**
+	session_start();
+	require_once('Connect.php');
+	$error = false;
+	$success = false;
+	
+	if(@$_POST['Users']){
+		/**
     	 * Here we start checks to make sure that all forms are filled out correctly
     	 */
-    	if(!$_POST['FirstName']){
-    	    $error = true;
-    	}
-		
-    	if(!$_POST['LastName']){
-    	    $error = true;
-    	}
-    	
-    	if(!$_POST['Email']){
-    	    $error = true;
-    	}
-	
-	   /**This part makes sure that there is not another email in the system*/
-	
-       if($_POST['Email'] == mysql_query("SELECT * FROM Users WHERE Email = '$_POST[Email]'")){
-            $error = true;
-        }
-    
-        
-    	
-    	if(!$_POST['PhoneNumber']){
-    	    $error = true;
-    	}
-		
-	   if(!$_POST['CardNumber']){
-            $error = true;
-    	}
-	
-	   if(!$_POST['Address']){
-            $error = true;
-    	}
-	
-	   if(!$_POST['Password']){
-            $error = true;
-    	}
-	
-	   if(!$_POST['ConfirmPassword']){
-            $error = true;
-    	}
-	
-	   /**Checks to see if Passwords Match*/
-	
-	   if($_POST['Password'] !== $_POST['ConfirmPassword']){
-            $error = true;
-    	}
+		if(!$_POST['FirstName']){
+			$error = true;
+		}
 
-	/**After validation checks are complete and everthing is ok then we insert data into database here*/
-     
-	if($error == false) {
-        $stmt = $dbh->prepare('INSERT INTO Users (FirstName, LastName, Email, PhoneNumber, CardNumber, Address, Password)
+		if(!$_POST['LastName']){
+			$error = true;
+		}
+
+		if(!$_POST['Email']){
+			$error = true;
+		}
+
+		/**This part makes sure that there is not another email in the system*/
+		
+		if($_POST['Email'] == mysql_query("SELECT * FROM Users WHERE Email = '$_POST[Email]'")){
+			$error = true;
+		}
+
+		if(!$_POST['PhoneNumber']){
+			$error = true;
+		}
+
+		if(!$_POST['CardNumber']){
+			$error = true;
+		}
+
+		if(!$_POST['Address']){
+			$error = true;
+		}
+
+		if(!$_POST['Password']){
+			$error = true;
+		}
+
+		if(!$_POST['ConfirmPassword']){
+			$error = true;
+		}
+
+		/**Checks to see if Passwords Match*/
+		
+		if($_POST['Password'] !== $_POST['ConfirmPassword']){
+			$error = true;
+		}
+
+		/**After validation checks are complete and everthing is ok then we insert data into database here*/
+		
+		if($error == false) {
+			$stmt = $dbh->prepare('INSERT INTO Users (FirstName, LastName, Email, PhoneNumber, CardNumber, Address, Password)
         VALUES (:FirstName, :LastName, :Email, :PhoneNumber, :CardNumber, :Address, :Password)');
-	   $result = $stmt->execute(
-   		array(
-		  	'FirstName' => $_POST['FirstName'],
-			'LastName' => $_POST['LastName'],
-			'Email' => $_POST['Email'],
-			'PhoneNumber' => $_POST['PhoneNumber'],
-			'CardNumber' => $_POST['CardNumber'],
-			'Address' => $_POST['Address'],
-			'Password' => $_POST['Password']
-   		)
-	);
-        $success = true;
-    }
-    
-    
-print_r($stmt->errorInfo());
-print_r($dbh->errorInfo());
-    
-	/**If the data from the form is inserted into data base then it displays a success message*/ 
-	
-	if($success){
-   		$success = "User " . $_POST['Email'] . " was successfully saved.";
-		
-		/**Now I use PHP SESSIONS to save user data so that it is accesable outside of this page*/
-		
-		$_SESSION['SignIn'] = 1;
-		$_SESSION['FirstName'] = $_POST['FirstName'];
-		$_SESSION['LastName'] = $_POST['LastName'];
-		$_SESSION['Email'] = $_POST['Email'];
-		
-		/**Takes User to spot to sign in*/
-		
-        	header("Location: SignIn.php");
-	}
-	
-	else{
-   		$success = "There was an error saving " . $_POST['Email'];
-	}
-}
-?>
+			$result = $stmt->execute(   
+                 array(  
+                      'FirstName' => $_POST['FirstName'],
+                      'LastName' => $_POST['LastName'],
+                      'Email' => $_POST['Email'],
+                      'PhoneNumber' => $_POST['PhoneNumber'],
+                      'CardNumber' => $_POST['CardNumber'],
+                      'Address' => $_POST['Address'],
+                      'Password' => $_POST['Password']   
+                 ));
+			$success = true;
+		}
 
+		print_r($stmt->errorInfo());
+		print_r($dbh->errorInfo());
+		/**If the data from the form is inserted into data base then it displays a success message*/
+		
+		if($success){
+			$success = "User " . $_POST['Email'] . " was successfully saved.";
+			/**Now I use PHP SESSIONS to save user data so that it is accesable outside of this page*/
+			$_SESSION['SignIn'] = 1;
+			$_SESSION['FirstName'] = $_POST['FirstName'];
+			$_SESSION['LastName'] = $_POST['LastName'];
+			$_SESSION['Email'] = $_POST['Email'];
+			/**Takes User to spot to sign in*/
+			header("Location: SignIn.php");
+		} 
+         
+         else {
+              $success = "There was an error saving " . $_POST['Email'];
+         }
+
+	}
+?>
+   
     <!DOCTYPE html>
     <html>
 
