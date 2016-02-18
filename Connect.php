@@ -1,6 +1,6 @@
 <?php
 try {
-    $dbh = new PDO('mysql:host=localhost; dbname=TechMaster', 'root', 'root');
+    $dbh = new PDO('mysql:host=localhost; dbname=TechMaster', 'root', '');
 } 
 
 catch (PDOException $e) {
