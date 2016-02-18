@@ -24,39 +24,29 @@
 
           /**Checks to see if that user exists*/
 
-          $Query1 = $dbh1->
-               prepare("SELECT * FROM Users WHERE Email = :Email AND Password = :Password");
+          $Query1 = $dbh->
+               prepare("SELECT * FROM Users WHERE Email = :Email AND Password = :Password;");
           
-          $dbh1->
-               execute();
-
           $SignIn = $Query1->
                fetch();
 
           /**If there is a User then User is taken to their profile*/
 
-          if($SignIn){
-               /*Query UserInfo so it can be used accross the site*/
+		/*Query UserInfo so it can be used accross the site*/
 
-               $Query2 = $dbh2->
-                    prepare("SELECT FirstName, LastName, Email FROM Users WHERE Email = :Email AND Password = :Password;");
-               $dbh2->
-                    execute();
-               $UserInfo = $Query2->
-                    fetchAll();
-               
-               $stmt = $dbh->prepare('SELECT * FROM users');
-               $stmt->execute();
-               $users = $stmt->fetchAll();
+		$Query2 = $dbh->
+			prepare("SELECT FirstName, LastName, Email FROM Users WHERE Email = :Email AND Password = :Password;");
+		
+		$UserInfo = $Query2->
+			fetchAll();
+		
+		/*Queried Data is then saved in PHP SESSION*/
 
-               /*Queried Data is then saved in PHP SESSION*/
-
-               $_SESSION['FirstName'] = fetchAll(0);
-               $_SESSION['LastName'] = fetchAll(1);
-               $_SESSION['Email'] = fetchAll(2);
-               
-               header('location: Profile.php');
-          }
+		$_SESSION['FirstName'] = $UserInfo[0];
+		$_SESSION['LastName'] = $UserInfo[1];
+		$_SESSION['Email'] = $UserInfo[2];
+		
+		header('location: Profile.php');
      }
 ?>
 
