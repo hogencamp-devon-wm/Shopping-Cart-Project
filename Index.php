@@ -23,7 +23,17 @@
 					<a class="mdl-navigation__link" href="Product.php">Products</a>
 					<a class="mdl-navigation__link" href="Contact.php">Contact</a>
 					<a class="mdl-navigation__link" href="About.php">About</a>
-					<a class="mdl-navigation__link" href="SignIn.php">Sign In</a>
+					<?php
+						session_start();
+     	
+						if(@$_SESSION['SignIn'] == true) {
+							echo ("<a class='mdl-navigation__link' href='SignOut.php'>Sign Out</a>");
+						}
+					
+						else {
+							echo ("<a class='mdl-navigation__link' href='SignIn.php'>Sign In</a>");
+						}
+					?>
 					<a class="mdl-navigation__link" href="Cart.php">
 						<img src="Images/cart.png" width="30px">
 						<div class="IconBubble" style="margin-top: 8px;">
@@ -37,7 +47,11 @@
 		</header>
 
 		<div class="mdl-layout__drawer">
-			<span class="mdl-layout-title">Welcome</span>
+			<span class="mdl-layout-title">Welcome 
+				<?php
+					$Name = @$_SESSION['FirstName'];
+					echo ($Name);
+				?></span>
 			<!--PHP out the persons name HERE!-->
 			<nav class="mdl-navigation">
 				<a class="mdl-navigation__link" href="Profile.php">Profile</a>

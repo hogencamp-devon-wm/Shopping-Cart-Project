@@ -4,7 +4,7 @@
 
      /**Checks to see if user has already logged in and if so they will be redirected to Profile Page*/
 
-     if(@$_SESSION['SignIn'] == 1){
+     if(@$_SESSION['SignIn'] == true){
           header('location: Profile.php');
      }
 
