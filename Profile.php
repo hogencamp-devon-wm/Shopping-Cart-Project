@@ -50,7 +50,9 @@
             
             <main class="mdl-layout__content">
                 <div class="page-content">
-                    
+                    <?php
+					echo $_SESSION['FirstName'];
+				?>
                 </div>
             </main>
         </div>

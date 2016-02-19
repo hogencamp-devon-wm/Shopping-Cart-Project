@@ -67,6 +67,18 @@
                       'Address' => $_POST['Address'],
                       'Password' => $_POST['Password']   
                  ));
+			
+			$Query = $dbh->prepare("SELECT UserID FROM Users WHERE Email = :Email;");
+
+			//This Replaces the :Email and :Password above with the real values that need to be used in the query.
+			$Query->execute(
+				array(
+					'Email'=>$_POST['Email'] 
+				)
+			);
+
+			$UserID = $Query->fetch();
+			
 			$success = true;
 		}
 
@@ -75,9 +87,9 @@
 		/**If the data from the form is inserted into data base then it displays a success message*/
 		
 		if($success){
-			$success = "User " . $_POST['Email'] . " was successfully saved.";
 			/**Now I use PHP SESSIONS to save user data so that it is accesable outside of this page*/
 			$_SESSION['SignIn'] = 1;
+			$_SESSION['UserID'] = $UserID;
 			$_SESSION['FirstName'] = $_POST['FirstName'];
 			$_SESSION['LastName'] = $_POST['LastName'];
 			$_SESSION['Email'] = $_POST['Email'];

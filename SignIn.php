@@ -1,6 +1,7 @@
 <?php
      session_start();
      require_once('Connect.php');
+	$error = false;
 
      /**Checks to see if user has already logged in and if so they will be redirected to Profile Page*/
 
@@ -15,39 +16,38 @@
           /**Start Checks to make sure that the forms have stuff in them*/
 
           if(!$_POST['Email']){
-               $error .= '<p>Email is a required field!</p>';
+               $error = true;
           }
 
           if(!$_POST['Password']){
-               $error .= '<p>Password is a required field!</p>';
+               $error = true;
           }
 
           /**Checks to see if that user exists*/
+          $Query2 = $dbh->prepare("SELECT UserID, FirstName, LastName, Email FROM Users WHERE Email = :Email AND Password = :Password;");
 
-          $Query1 = $dbh->
-               prepare("SELECT * FROM Users WHERE Email = :Email AND Password = :Password;");
-          
-          $SignIn = $Query1->
-               fetch();
+		//This Replaces the :Email and :Password above with the real values that need to be used in the query.
+		$Query2->execute(
+			array(
+				'Email'=>$_POST['Email'], 
+				'Password'=>$_POST['Password']
+			)
+		);
 
-          /**If there is a User then User is taken to their profile*/
-
-		/*Query UserInfo so it can be used accross the site*/
-
-		$Query2 = $dbh->
-			prepare("SELECT FirstName, LastName, Email FROM Users WHERE Email = :Email AND Password = :Password;");
+		$UserInfo = $Query2->fetch();
 		
-		$UserInfo = $Query2->
-			fetchAll();
+        	//If there is an account linked to entered info then we can save data and take them to profile
+		if($UserInfo) {
+			/*Queried Data is then saved in PHP SESSION*/
+			$_SESSION['UserID'] = $UserInfo[0];
+			$_SESSION['FirstName'] = $UserInfo[1];
+			$_SESSION['LastName'] = $UserInfo[2];
+			$_SESSION['Email'] = $UserInfo[3];
+			$_SESSION['SignIn'] = true;
 		
-		/*Queried Data is then saved in PHP SESSION*/
-
-		$_SESSION['FirstName'] = $UserInfo[0];
-		$_SESSION['LastName'] = $UserInfo[1];
-		$_SESSION['Email'] = $UserInfo[2];
-		
-		header('location: Profile.php');
-     }
+			header('location: Profile.php');
+		}
+	}
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +85,6 @@
       </header>
       <div class="mdl-layout__drawer">
          <span class="mdl-layout-title">Welcome</span>
-         <!--PHP out the persons name HERE!-->
          <nav class="mdl-navigation">
             <a class="mdl-navigation__link" href="Profile.php">Profile</a>
             <a class="mdl-navigation__link" href="FAQ.php">FAQ</a>
@@ -109,6 +108,11 @@
                   <center>
                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit" name="SignIn" value="1">Sign In</button>
                   </center>
+				<?php
+					if($error){
+						echo "<h6 style='color: red;'>Fill each input out</h6>";
+					}
+				?>
                </form>
                <center>
                   <h6>Dont Have an account, Register Here.</h6>
@@ -117,7 +121,7 @@
                   </a>
                </center>
             </center>
-            
+		    
             <footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">
                <div class="mdl-mini-footer__left-section">
                   <div class="mdl-logo">Tech Master</div>

@@ -71,7 +71,7 @@
 						</a>
 						<h3 class="Price">$500.00</h3>
 						<center>
-							<form action="post" name="Nexus6P" class="ProductForm">
+							<form method="post" action="CartPhp/Nexus6PCart.php" name="Nexus6P" class="ProductForm">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
@@ -87,9 +87,15 @@
 						 	<h3 class="main_header">Nexus 5X</h3>
 					  	</a>
 					  	<h3 class="Price">$300.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>
+					  	<center>
+							<form method="post" name="Nexus5X" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>
 				   	</td>
 				   	
 				   	<td class="Product">
@@ -98,9 +104,15 @@
 						 	<h3 class="main_header">Nexus 10</h3>
 					  	</a>
 					  	<h3 class="Price">$500.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>
+					  	<center>
+							<form method="post" name="Nexus10" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>
 				   	</td>
 			    	</tr>
 			    	
@@ -111,9 +123,15 @@
 						 	<h3 class="main_header">Nexus 9</h3>
 					  	</a>
 					  	<h3 class="Price">$400.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>  
+					  	<center>
+							<form method="post" name="Nexus9" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>  
 				   	</td>
 				   	
 				   	<td class="Product">
@@ -122,9 +140,15 @@
 						 	<h3 class="main_header">Moto 360</h3>
 					  	</a>
 					  	<h3 class="Price">$300.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>   
+					  	<center>
+							<form method="post" name="Moto360" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>   
 				   	</td>
 				   	
 				   	<td class="Product">
@@ -133,9 +157,15 @@
 						 	<h3 class="main_header">Fossil</h3>
 					  	</a>
 					  	<h3 class="Price">$275.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>   
+					  	<center>
+							<form method="post" name="Fossil" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>   
 				   	</td>                
 			    	</tr>
 			    	
@@ -146,9 +176,15 @@
 						 	<h3 class="main_header">Pixel</h3>
 					  	</a>
 					  	<h3 class="Price">$1000.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>
+					  	<center>
+							<form method="post" name="Pixel" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>
 				   	</td>
 				   	
 				   	<td class="Product">
@@ -157,10 +193,15 @@
 						 	<h3 class="main_header">Razer Blade Stealth</h3>
 					  	</a>
 					  	<h3 class="Price">$1000.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>
-					  	
+					  	<center>
+							<form method="post" name="Razer" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>
 				   	</td>
 				   	
 				   	<td class="Product">
@@ -169,9 +210,15 @@
 						 	<h3 class="main_header">Big Red</h3>
 					  	</a>
 					  	<h3 class="Price">$2000.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>
+					  	<center>
+							<form method="post" name="BigRed" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>
 				   	</td>
 			    	</tr>
 			    	
@@ -182,9 +229,15 @@
 						 	<h3 class="main_header">Arctic Yeti</h3>
 					  	</a>
 					  	<h3 class="Price">$2000.00</h3>
-					  	<a class="Link" href=""><!--ADD TO CART HERE!-->
-						 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add To Cart</button>
-					  	</a>
+					  	<center>
+							<form method="post" name="Yeti" class="ProductForm">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<label class="mdl-textfield__label" for="sample1">Qty</label>
+							</div>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
+					  		</form>
+						</center>
 				   	</td>
 			    	</tr>
 				</table>

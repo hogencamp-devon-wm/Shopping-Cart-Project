@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -24,9 +27,7 @@
 					<a class="mdl-navigation__link" href="Contact.php">Contact</a>
 					<a class="mdl-navigation__link" href="About.php">About</a>
 					<?php
-						session_start();
-     	
-						if(@$_SESSION['SignIn'] == true) {
+						if($_SESSION['SignIn'] == true) {
 							echo ("<a class='mdl-navigation__link' href='SignOut.php'>Sign Out</a>");
 						}
 					
@@ -49,9 +50,11 @@
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Welcome 
 				<?php
-					$Name = @$_SESSION['FirstName'];
-					echo ($Name);
-				?></span>
+					if($_SESSION['SignIn'] == true){
+						echo $_SESSION['FirstName'];
+					}
+				?>
+			</span>
 			<!--PHP out the persons name HERE!-->
 			<nav class="mdl-navigation">
 				<a class="mdl-navigation__link" href="Profile.php">Profile</a>
