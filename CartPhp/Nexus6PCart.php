@@ -2,6 +2,11 @@
 	require_once('Connect.php');
 	session_start();
 
+	$Item = "Nexus6P";
+	$Cost = 500;
+	$Quantity = $_POST['Quantity'];
+	$QuantityCost = $Cost * $Quantity;
+
 	if($_POST['Quantity'] != 0){
 		$_SESSION['UserID'] = $UserID;
 		
@@ -25,7 +30,7 @@
 			);
 		}
 		
-		$Query = $dbh->prepare("SELECT CartID, CartCost FROM Cart WHERE UserID = :UserID;");
+		$Query = $dbh->prepare("SELECT CartID FROM Cart WHERE UserID = :UserID;");
 
 		$Query->execute(
 			array(
@@ -35,7 +40,18 @@
 
 		$UserCartInfo = $Query->fetch();
 		
-		$CartID = $UserCartInfo[0];
-		$CartCost =UserCartInfo[1];
+		$CartID = $UserCartInfo;
+		
+		$Query = $dbh->prepare("INSERT INTO CartItems (Cart_CartID, Quantity, Item, Cost) 
+		VALUES (:CartID, :Quantity, :Item, :Cost);");
+		
+		$result = $stmt->execute(
+			array(
+				'CartID' => $CartID,
+				'Quantity' => $Quantity,
+				'Item' => $Item,
+				'Cost' => $QuantityCost
+			)
+		);
 	}
 ?>
