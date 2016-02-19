@@ -71,7 +71,7 @@
 						</a>
 						<h3 class="Price">$500.00</h3>
 						<center>
-							<form method="post" action="CartPhp/Nexus6PCart.php" name="Nexus6P" class="ProductForm">
+							<form method="post" action="Nexus6PCart.php" name="Nexus6P" class="ProductForm">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>

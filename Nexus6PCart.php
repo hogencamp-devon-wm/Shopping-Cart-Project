@@ -8,13 +8,13 @@
 	$QuantityCost = $Cost * $Quantity;
 
 	if($_POST['Quantity'] != 0){
-		$_SESSION['UserID'] = $UserID;
+		$UserID = $_SESSION['UserID'];
 		
 		$Query = $dbh->prepare("SELECT Users_UserID FROM Cart WHERE UserID = :UserID;");
 
 		$Query->execute(
 			array(
-				'UserID'=>$UserID 
+				'UserID'=> $UserID 
 			)
 		);
 
@@ -45,7 +45,7 @@
 		$Query = $dbh->prepare("INSERT INTO CartItems (Cart_CartID, Quantity, Item, Cost) 
 		VALUES (:CartID, :Quantity, :Item, :Cost);");
 		
-		$result = $stmt->execute(
+		$result = $Query->execute(
 			array(
 				'CartID' => $CartID,
 				'Quantity' => $Quantity,
@@ -53,5 +53,9 @@
 				'Cost' => $QuantityCost
 			)
 		);
+          print_r($stmt->errorInfo());
+          print_r($dbh->errorInfo());
+         
+          header("Location: Product.php");
 	}
 ?>
