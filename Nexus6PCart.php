@@ -7,20 +7,20 @@
 	$Quantity = $_POST['Quantity'];
 	$QuantityCost = $Cost * $Quantity;
 
-	if($_POST['Quantity'] != 0){
+	if ($Quantity) {
 		$UserID = $_SESSION['UserID'];
 		
 		$Query = $dbh->prepare("SELECT Users_UserID FROM Cart WHERE UserID = :UserID;");
 
 		$Query->execute(
 			array(
-				'UserID'=> $UserID 
+				'UserID' => $UserID
 			)
 		);
 
-		$CartUser = $Query->fetch();
+		$UserID = $Query->fetch();
 		
-		if($CartUser){
+		if($UserID){
 			//Insert Into Car Table the UserID
 			$stmt = $dbh->prepare("INSERT INTO Cart (User_UserID) VALUES (:UserID);");
 			$result = $stmt->execute(   
@@ -42,7 +42,7 @@
 		
 		$CartID = $UserCartInfo;
 		
-		$Query = $dbh->prepare("INSERT INTO CartItems (Cart_CartID, Quantity, Item, Cost) 
+		$Query = $dbh->prepare("INSERT INTO CartI tems (Cart_CartID, Quantity, Item, Cost) 
 		VALUES (:CartID, :Quantity, :Item, :Cost);");
 		
 		$result = $Query->execute(
@@ -53,9 +53,10 @@
 				'Cost' => $QuantityCost
 			)
 		);
-          print_r($stmt->errorInfo());
-          print_r($dbh->errorInfo());
          
-          header("Location: Product.php");
+     //header("Location: Product.php");
 	}
 ?>
+
+
+<?php echo $Quantity; ?>
