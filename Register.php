@@ -56,7 +56,7 @@
 		
 		if($error == false) {
 			$stmt = $dbh->prepare('INSERT INTO Users (FirstName, LastName, Email, PhoneNumber, CardNumber, Address, Password)
-        VALUES (:FirstName, :LastName, :Email, :PhoneNumber, :CardNumber, :Address, :Password)');
+               VALUES (:FirstName, :LastName, :Email, :PhoneNumber, :CardNumber, :Address, :Password)');
 			$result = $stmt->execute(   
                  array(  
                       'FirstName' => $_POST['FirstName'],

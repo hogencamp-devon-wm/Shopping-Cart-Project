@@ -50,9 +50,12 @@
             
             <main class="mdl-layout__content">
                 <div class="page-content">
-                    <?php
-					echo $_SESSION['FirstName'];
-				?>
+                    <h1>Welcome 
+                         <?php
+					          echo $_SESSION['FirstName'];
+                         ?>
+                    </h1>
+                    <h3>This is where all of your information is displayed</h3>
                 </div>
             </main>
         </div>
