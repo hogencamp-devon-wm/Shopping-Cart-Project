@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once('Connect.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,7 @@
 						if($_SESSION['SignIn'] == true) {
 							echo ("<a class='mdl-navigation__link' href='SignOut.php'>Sign Out</a>");
 						}
-					
+
 						else {
 							echo ("<a class='mdl-navigation__link' href='SignIn.php'>Sign In</a>");
 						}
@@ -39,7 +40,9 @@
 						<img src="Images/cart.png" width="30px">
 						<div class="IconBubble" style="margin-top: 8px;">
 							<center>
-								<p>3</p>
+								<?php
+
+								?>
 							</center>
 						</div>
 					</a>
@@ -48,7 +51,7 @@
 		</header>
 
 		<div class="mdl-layout__drawer">
-			<span class="mdl-layout-title">Welcome 
+			<span class="mdl-layout-title">Welcome
 				<?php
 					if($_SESSION['SignIn'] == true){
 						echo $_SESSION['FirstName'];
@@ -97,7 +100,7 @@
 					<img class="Image2" src="Images/tablet.png" width="100%">
 					<h1 class="TextOver">Tablets</h1>
 					<br>
-					<h3 class="TextOverDescription">Premium design with the best of Google built in, so 
+					<h3 class="TextOverDescription">Premium design with the best of Google built in, so
 				 		you can work and play any way you want to</h3>
 
 					<a href="Product.php">

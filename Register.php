@@ -3,7 +3,7 @@
 	require_once('Connect.php');
 	$error = false;
 	$success = false;
-	
+
 	if(@$_POST['Users']){
 		/**
     	 * Here we start checks to make sure that all forms are filled out correctly
@@ -21,7 +21,7 @@
 		}
 
 		/**This part makes sure that there is not another email in the system*/
-		
+
 		if($_POST['Email'] == mysql_query("SELECT * FROM Users WHERE Email = '$_POST[Email]'")){
 			$error = true;
 		}
@@ -47,45 +47,45 @@
 		}
 
 		/**Checks to see if Passwords Match*/
-		
+
 		if($_POST['Password'] !== $_POST['ConfirmPassword']){
 			$error = true;
 		}
 
 		/**After validation checks are complete and everthing is ok then we insert data into database here*/
-		
+
 		if($error == false) {
 			$stmt = $dbh->prepare('INSERT INTO Users (FirstName, LastName, Email, PhoneNumber, CardNumber, Address, Password)
                VALUES (:FirstName, :LastName, :Email, :PhoneNumber, :CardNumber, :Address, :Password)');
-			$result = $stmt->execute(   
-                 array(  
+			$result = $stmt->execute(
+                 array(
                       'FirstName' => $_POST['FirstName'],
                       'LastName' => $_POST['LastName'],
                       'Email' => $_POST['Email'],
                       'PhoneNumber' => $_POST['PhoneNumber'],
                       'CardNumber' => $_POST['CardNumber'],
                       'Address' => $_POST['Address'],
-                      'Password' => $_POST['Password']   
+                      'Password' => $_POST['Password']
                  ));
-			
+
 			$Query = $dbh->prepare("SELECT UserID FROM Users WHERE Email = :Email;");
 
 			//This Replaces the :Email and :Password above with the real values that need to be used in the query.
 			$Query->execute(
 				array(
-					'Email'=>$_POST['Email'] 
+					'Email'=>$_POST['Email']
 				)
 			);
 
 			$UserID = $Query->fetch();
-			
+
 			$success = true;
 		}
 
 		print_r($stmt->errorInfo());
 		print_r($dbh->errorInfo());
 		/**If the data from the form is inserted into data base then it displays a success message*/
-		
+
 		if($success){
 			/**Now I use PHP SESSIONS to save user data so that it is accesable outside of this page*/
 			$_SESSION['SignIn'] = 1;
@@ -95,15 +95,15 @@
 			$_SESSION['Email'] = $_POST['Email'];
 			/**Takes User to spot to sign in*/
 			header("Location: SignIn.php");
-		} 
-         
+		}
+
          else {
               $success = "There was an error saving " . $_POST['Email'];
          }
 
 	}
 ?>
-   
+
     <!DOCTYPE html>
     <html>
 
