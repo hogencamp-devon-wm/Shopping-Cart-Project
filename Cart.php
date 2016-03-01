@@ -49,15 +49,34 @@
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <?php
-                         $CartID = $_SESSION['CartID'];
+                        $UserID = $_SESSION['UserID'];
+                        $Query = $dbh->prepare("SELECT CartID FROM Cart WHERE Users_UserID = :UserID;");
 
-                         $Query = $dbh->prepare("SELECT * FROM CartItems WHERE Cart_CartID = :CartID");
-                         $Query = $dbh->execute(
+                        $Query->execute(
                             array(
-                                'Cart_CartID' => $CartID
+                                'UserID' => $UserID
                             )
-                         );
+                        );
+
+                        $CartID = $Query->fetch();
+
+                        $Query2 = $dbh->prepare("SELECT * FROM CartItems WHERE Cart_CartID = :Cart_CartID");
+                        $Query2->execute(
+                            array(
+                                'Cart_CartID' => $CartID['CartID']
+                            )
+                        );
+
+                        $results = $Query2->fetchAll();
                     ?>
+
+                    <table>
+                    <?php
+                        foreach ($results as $row) {
+                            echo "<tr><td>".$row['Quantity']."</td><td>".$row['Item']."</td><td>".$row['Cost']."</td></tr>";
+                        }
+                    ?>
+                    </table>
                 </div>
             </main>
         </div>

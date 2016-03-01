@@ -2,7 +2,7 @@
      require_once('Connect.php');
      session_start();
 
-     $Item = "Nexus6P";
+     $Item = "Nexus10";
      $Cost = 500;
      $Quantity = $_POST['Quantity'];
      $QuantityCost = $Cost * $Quantity;

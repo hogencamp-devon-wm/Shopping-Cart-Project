@@ -1,11 +1,9 @@
 <?php
 	session_start();
 
-	/*require_once('Connect.php');*/
+	require_once('Connect.php');
 	$error = false;
 	$success = false;
-
-	
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +58,7 @@
             <div class="page-content">
                 <h1 class="main_header">Welcome to Products</h1>
                 <h3 class="main_header">We have all the products you need to power your Tech Master Life</h3>
-                
+
                 <div class="Products">
 				<table>
 			    	<tr>
@@ -80,7 +78,7 @@
 					  		</form>
 						</center>
 				   	</td>
-				   	
+
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/Nexus5X.png" width="100%">
 					  	<a class="Link" href=""><!--Insert Link for Product HERE!-->
@@ -88,7 +86,7 @@
 					  	</a>
 					  	<h3 class="Price">$300.00</h3>
 					  	<center>
-							<form method="post" name="Nexus5X" class="ProductForm">
+							<form method="post" name="Nexus5X" class="ProductForm" action="Nexus5XCart.php">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
@@ -97,7 +95,7 @@
 					  		</form>
 						</center>
 				   	</td>
-				   	
+
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/nexus10.png" width="100%">
 					  	<a class="Link" href=""><!--Insert Link for Product HERE!-->
@@ -105,7 +103,7 @@
 					  	</a>
 					  	<h3 class="Price">$500.00</h3>
 					  	<center>
-							<form method="post" name="Nexus10" class="ProductForm">
+							<form method="post" name="Nexus10" class="ProductForm" action="Nexus10Cart.php">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
@@ -115,7 +113,7 @@
 						</center>
 				   	</td>
 			    	</tr>
-			    	
+
 			    	<tr>
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/Nexus9.png" width="100%">
@@ -124,16 +122,16 @@
 					  	</a>
 					  	<h3 class="Price">$400.00</h3>
 					  	<center>
-							<form method="post" name="Nexus9" class="ProductForm">
+							<form method="post" name="Nexus9" class="ProductForm" action="Nexus9Cart.php">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
 							</div>
 					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
 					  		</form>
-						</center>  
+						</center>
 				   	</td>
-				   	
+
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/Moto.png" width="100%">
 					  	<a class="Link" href=""><!--Insert Link for Product HERE!-->
@@ -141,16 +139,16 @@
 					  	</a>
 					  	<h3 class="Price">$300.00</h3>
 					  	<center>
-							<form method="post" name="Moto360" class="ProductForm">
+							<form method="post" name="Moto360" class="ProductForm" action="Moto360Cart.php">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
 							</div>
 					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
 					  		</form>
-						</center>   
+						</center>
 				   	</td>
-				   	
+
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/Fossil.png" width="100%">
 					  	<a class="Link" href=""><!--Insert Link for Product HERE!-->
@@ -158,17 +156,17 @@
 					  	</a>
 					  	<h3 class="Price">$275.00</h3>
 					  	<center>
-							<form method="post" name="Fossil" class="ProductForm">
+							<form method="post" name="Fossil" class="ProductForm" action="FossilCart.php">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
 							</div>
 					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
 					  		</form>
-						</center>   
-				   	</td>                
+						</center>
+				   	</td>
 			    	</tr>
-			    	
+
 			    	<tr>
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/pixel.png" width="100%">
@@ -186,7 +184,7 @@
 					  		</form>
 						</center>
 				   	</td>
-				   	
+
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/Razer.png" width="100%">
 					  	<a class="Link" href=""><!--Insert Link for Product HERE!-->
@@ -203,7 +201,7 @@
 					  		</form>
 						</center>
 				   	</td>
-				   	
+
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/BigRedPC.jpg" width="100%">
 					  	<a class="Link" href=""><!--Insert Link for Product HERE!-->
@@ -221,7 +219,7 @@
 						</center>
 				   	</td>
 			    	</tr>
-			    	
+
 			    	<tr>
 				   	<td class="Product">
 					  	<img class="Image1" src="Images/Yeti.jpg" width="100%">
@@ -242,7 +240,7 @@
 			    	</tr>
 				</table>
                 </div>
-            </div>    
+            </div>
         </main>
     </div>
 </body>
