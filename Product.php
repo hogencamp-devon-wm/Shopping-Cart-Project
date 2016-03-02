@@ -177,7 +177,7 @@
 					  	<center>
 							<form method="post" name="Pixel" class="ProductForm">
 							<div class="mdl-textfield mdl-js-textfield">
-								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<input class="mdl-textfield__input" type="number" name="Quantity" action="PixelCart.php">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
 							</div>
 					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
@@ -194,7 +194,7 @@
 					  	<center>
 							<form method="post" name="Razer" class="ProductForm">
 							<div class="mdl-textfield mdl-js-textfield">
-								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<input class="mdl-textfield__input" type="number" name="Quantity" action="RazerCart.php">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
 							</div>
 					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
@@ -211,7 +211,7 @@
 					  	<center>
 							<form method="post" name="BigRed" class="ProductForm">
 							<div class="mdl-textfield mdl-js-textfield">
-								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<input class="mdl-textfield__input" type="number" name="Quantity" action="BigRedCart.php">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
 							</div>
 					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
@@ -230,7 +230,7 @@
 					  	<center>
 							<form method="post" name="Yeti" class="ProductForm">
 							<div class="mdl-textfield mdl-js-textfield">
-								<input class="mdl-textfield__input" type="number" name="Quantity">
+								<input class="mdl-textfield__input" type="number" name="Quantity" action="YetiCart.php">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
 							</div>
 					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Add To Cart</button>
@@ -244,5 +244,4 @@
         </main>
     </div>
 </body>
-
 </html>

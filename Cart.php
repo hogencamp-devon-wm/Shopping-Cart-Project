@@ -70,13 +70,24 @@
                         $results = $Query2->fetchAll();
                     ?>
 
-                    <table>
-                    <?php
-                        foreach ($results as $row) {
-                            echo "<tr><td>".$row['Quantity']."</td><td>".$row['Item']."</td><td>".$row['Cost']."</td></tr>";
-                        }
-                    ?>
-                    </table>
+                    <center>
+                        <table class="mdl-data-table mdl-js-data-table">
+                            <thead>
+                              <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Quantity</th>
+                                <th class="mdl-data-table__cell--non-numeric">Item</th>
+                                <th class="mdl-data-table__cell--non-numeric">Cost</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    foreach ($results as $row) {
+                                        echo "<tr><td class="mdl-data-table__cell--non-numeric">".$row['Quantity']."</td><td class="mdl-data-table__cell--non-numeric">".$row['Item']."</td><td class="mdl-data-table__cell--non-numeric">".$row['Cost']."</td></tr>";
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </center>
                 </div>
             </main>
         </div>
