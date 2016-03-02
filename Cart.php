@@ -68,6 +68,7 @@
                         );
 
                         $results = $Query2->fetchAll();
+
                     ?>
 
                     <center>
@@ -82,7 +83,7 @@
                             <tbody>
                                 <?php
                                     foreach ($results as $row) {
-                                        echo "<tr><td class="mdl-data-table__cell--non-numeric">".$row['Quantity']."</td><td class="mdl-data-table__cell--non-numeric">".$row['Item']."</td><td class="mdl-data-table__cell--non-numeric">".$row['Cost']."</td></tr>";
+                                        echo "<tr><td class="."mdl-data-table__cell--non-numeric".">".$row['Quantity']."</td><td class="."mdl-data-table__cell--non-numeric".">".$row['Item']."</td><td class="."mdl-data-table__cell--non-numeric".">".$row['Cost']."</td></tr>";
                                     }
                                 ?>
                             </tbody>

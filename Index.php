@@ -41,7 +41,27 @@
 						<div class="IconBubble" style="margin-top: 8px;">
 							<center>
 								<?php
+									$UserID = $_SESSION['UserID'];
+									$Query = $dbh->prepare("SELECT CartID FROM Cart WHERE Users_UserID = :UserID;");
 
+									$Query->execute(
+										array(
+											'UserID' => $UserID
+										)
+									);
+
+									$CartID = $Query->fetch();
+
+									$Query3 = $dbh->prepare("SELECT COUNT(*) FROM CartItems WHERE CartID = :Cart_CartID");
+									$Query3->execute(
+										array(
+											'CartID' => $CartID['CartID']
+										)
+									);
+
+									$results2 = $Query3->fetchAll();
+
+									echo $results2;
 								?>
 							</center>
 						</div>

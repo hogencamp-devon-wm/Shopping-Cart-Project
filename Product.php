@@ -1,6 +1,5 @@
 <?php
 	session_start();
-
 	require_once('Connect.php');
 	$error = false;
 	$success = false;
@@ -228,7 +227,7 @@
 					  	</a>
 					  	<h3 class="Price">$2000.00</h3>
 					  	<center>
-							<form method="post" name="Yeti" class="ProductForm">
+							<form method="post" name="Yeti" class="ProductForm" action="YetiCart.php">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="number" name="Quantity" action="YetiCart.php">
 								<label class="mdl-textfield__label" for="sample1">Qty</label>
