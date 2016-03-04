@@ -29,13 +29,13 @@
 		//This Replaces the :Email and :Password above with the real values that need to be used in the query.
 		$Query2->execute(
 			array(
-				'Email'=>$_POST['Email'], 
+				'Email'=>$_POST['Email'],
 				'Password'=>$_POST['Password']
 			)
 		);
 
 		$UserInfo = $Query2->fetch();
-		
+
         	//If there is an account linked to entered info then we can save data and take them to profile
 		if($UserInfo) {
 			/*Queried Data is then saved in PHP SESSION*/
@@ -44,7 +44,7 @@
 			$_SESSION['LastName'] = $UserInfo[2];
 			$_SESSION['Email'] = $UserInfo[3];
 			$_SESSION['SignIn'] = true;
-		
+
 			header('location: Profile.php');
 		}
 	}
@@ -91,7 +91,7 @@
             <a class="mdl-navigation__link" href="About.php">About</a>
          </nav>
       </div>
-      
+
       <main class="mdl-layout__content">
          <div class="page-content">
             <center>
@@ -102,7 +102,7 @@
                      <label class="mdl-textfield__label" for="sample1">Email</label>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield">
-                     <input class="mdl-textfield__input" type="password" name="Password">
+                     <input class="mdl-textfield__input" type="text" name="Password">
                      <label class="mdl-textfield__label" for="sample1">Password</label>
                   </div>
                   <center>
@@ -121,7 +121,7 @@
                   </a>
                </center>
             </center>
-		    
+
             <footer class="mdl-mini-footer" style="position: fixed; bottom: 0; width: 100%;">
                <div class="mdl-mini-footer__left-section">
                   <div class="mdl-logo">Tech Master</div>
