@@ -76,6 +76,7 @@
                         );
 
                         $CartID = $Query->fetch();
+                        $_SESSION['CartID'] = $CartID;
 
                         $Query2 = $dbh->prepare("SELECT * FROM CartItems WHERE Cart_CartID = :Cart_CartID");
                         $Query2->execute(
@@ -86,9 +87,20 @@
 
                         $results = $Query2->fetchAll();
 
+                        $Query3 = $dbh->prepare("SELECT SUM(Cost) FROM CartItems WHERE Cart_CartID = :Cart_CartID");
+                        $Query3->execute(
+                            array(
+                                'Cart_CartID' => $CartID['CartID']
+                            )
+                        );
+
+                        $Total = $Query3->fetchAll();
                     ?>
 
                     <center>
+                        <h1 class="main_header">Welcome to your Cart</h1>
+                        <h3 class="main_header">This is where all of your products are displayed</h3>
+
                         <table class="mdl-data-table mdl-js-data-table">
                             <thead>
                               <tr>
@@ -103,6 +115,18 @@
                                         echo "<tr><td class="."mdl-data-table__cell--non-numeric".">".$row['Quantity']."</td><td class="."mdl-data-table__cell--non-numeric".">".$row['Item']."</td><td class="."mdl-data-table__cell--non-numeric".">".$row['Cost']."</td></tr>";
                                     }
                                 ?>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"></td>
+
+                                    <td class="mdl-data-table__cell--non-numeric"></td>
+
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <?php
+                                            //display the total cost of your cart
+                                            echo $Total;
+                                        ?>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </center>
