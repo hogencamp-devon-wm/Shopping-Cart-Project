@@ -76,6 +76,7 @@
                         );
 
                         $CartID = $Query->fetch();
+
                         $_SESSION['CartID'] = $CartID;
 
                         $Query2 = $dbh->prepare("SELECT * FROM CartItems WHERE Cart_CartID = :Cart_CartID");
@@ -87,14 +88,14 @@
 
                         $results = $Query2->fetchAll();
 
-                        $Query3 = $dbh->prepare("SELECT SUM(Cost) FROM CartItems WHERE Cart_CartID = :Cart_CartID");
+                        $Query3 = $dbh->prepare("SELECT SUM(Cost) AS Total FROM CartItems WHERE Cart_CartID = :Cart_CartID");
                         $Query3->execute(
                             array(
                                 'Cart_CartID' => $CartID['CartID']
                             )
                         );
 
-                        $Total = $Query3->fetchAll();
+                        $Total = $Query3->fetch(PDO::FETCH_ASSOC);
                     ?>
 
                     <center>
@@ -114,21 +115,15 @@
                                     foreach ($results as $row) {
                                         echo "<tr><td class="."mdl-data-table__cell--non-numeric".">".$row['Quantity']."</td><td class="."mdl-data-table__cell--non-numeric".">".$row['Item']."</td><td class="."mdl-data-table__cell--non-numeric".">".$row['Cost']."</td></tr>";
                                     }
+                                    echo $Total['Total'];
                                 ?>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"></td>
 
-                                    <td class="mdl-data-table__cell--non-numeric"></td>
-
-                                    <td class="mdl-data-table__cell--non-numeric">
-                                        <?php
-                                            //display the total cost of your cart
-                                            echo $Total;
-                                        ?>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
+
+                        <a href="RemoveCart.php">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Remove All</button>
+                        </a>
                     </center>
                 </div>
             </main>
